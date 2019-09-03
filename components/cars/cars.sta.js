@@ -16,6 +16,16 @@ const CarsStaAppNavigator = createStackNavigator(
   },
   {
     initialRouteName: 'CarsSearch',
+    /* The header config from HomeScreen is now here */
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
   },
 );
 
