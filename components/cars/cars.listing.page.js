@@ -5,18 +5,15 @@ export class CarsListingPage extends React.Component {
   render() {
     return (
       // eslint-disable-next-line react-native/no-inline-styles
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <View style={{height: 100}}>
         <ImageBackground
           source={require('../../assets/car_header_bg.png')}
           // eslint-disable-next-line react-native/no-inline-styles
           style={{width: '100%', height: '100%'}}>
-          <Text>Inside</Text>
+          <View style={{marginTop: 55}}>
+            <Text>NYC</Text>
+          </View>
         </ImageBackground>
-        <Text>Listing Page</Text>
-        <Button
-          title="Listing"
-          onPress={() => this.props.navigation.navigate('CarsReview')}
-        />
       </View>
     );
   }
