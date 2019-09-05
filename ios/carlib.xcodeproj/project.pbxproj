@@ -35,7 +35,6 @@
 		D6F603727064401602CBD705 /* libPods-carlib-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48714BAD53CA8FD4286DE51E /* libPods-carlib-tvOS.a */; };
 		D904C34C1D2749F5ABBDFC78 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C3BEA8E4D4DFDB164909A /* Octicons.ttf */; };
 		E597B5A43E2E4D4DBB5C70B8 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4215655394D74FAF8CF07BF3 /* FontAwesome5_Brands.ttf */; };
-		F7F90138DD1046F2927D9AEC /* COA-font-app.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C850F196117B416CA5B34BF4 /* COA-font-app.ttf */; };
 		F8A65CF298AA47BDA5019E41 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB6F57DE4FAF42AD9921CA7F /* AntDesign.ttf */; };
 		FB4E9F1C711A4F9C9B753525 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D3AFACB8D6549D88B1EAA6C /* Ionicons.ttf */; };
 /* End PBXBuildFile section */
@@ -401,7 +400,6 @@
 				30295DF9232095FA00097DF9 /* icomoon.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				F7F90138DD1046F2927D9AEC /* COA-font-app.ttf in Resources */,
 				F8A65CF298AA47BDA5019E41 /* AntDesign.ttf in Resources */,
 				1732CE12C2A4461982EA9A9E /* Entypo.ttf in Resources */,
 				9CADF97B896245BCB78E79D4 /* EvilIcons.ttf in Resources */,

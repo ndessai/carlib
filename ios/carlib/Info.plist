@@ -55,7 +55,6 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>COA-font-app.ttf</string>
 		<string>icomoon.ttf</string>
 		<string>AntDesign.ttf</string>
 		<string>Entypo.ttf</string>
