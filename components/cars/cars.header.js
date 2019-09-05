@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Button, Image, ImageBackground} from 'react-native';
+import CustomIcon from '../custom.icons';
 
 export class CarsHeader extends React.Component {
   render() {
@@ -10,8 +11,8 @@ export class CarsHeader extends React.Component {
           // eslint-disable-next-line react-native/no-inline-styles
           style={{width: '100%', height: '100%'}}>
           <View style={{marginTop: 55, flex: 1, height: 36, flexDirection: 'row'}}>
-            <View style={{width: 36}}>
-            <Image source={require('../../assets/back_button.png')} style={{marginLeft: 13, marginRight: 13, marginTop: 8, marginBottom: 8}}></Image>
+            <View style={{width: 36, paddingLeft: 13, paddingTop: 9}}>
+            <CustomIcon name='uniE75B' size={10,18} color="#ffffff"/>
             </View>
             <View style={{height: 36, flexGrow: 1, flexDirection: 'column', alignItems: 'center'}}>
               <View style={{flex: 1, height: 19, flexDirection: 'row'}}>
