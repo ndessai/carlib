@@ -36,11 +36,24 @@ const ListingBodyHeaderStyles = {
   ActionIconSize: {Width: 21, Height: 21},
   ActionColor: '#158acb',
   ActionText: {marginLeft: 10, fontSize: 12, color: '#158acb'},
-  ListingSummaryContainer: {height: 39, backgroundColor: '#e2e2e2'},
-  ListingSummaryItems: {marginTop: 12, marginBottom: 13, flexDirection: 'row'},
+  SummaryContainer: {
+    height: 30,
+    backgroundColor: '#e2e2e2',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+  },
+  SummaryItem: {
+    marginTop: 12,
+    marginBottom: 13,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  SummaryText: {marginLeft: 7, fontSize: 12, color: '#666666'},
+  SummaryColor: '#666666',
+  SummaryIconSize: {Width: 12, Height: 12},
 };
 
-class ActionHeader extends React.Component {
+class ActionHeaderItem extends React.Component {
   render() {
     return (
       <TouchableOpacity
@@ -62,6 +75,28 @@ class ActionHeader extends React.Component {
           {this.props.iconText}
         </Text>
       </TouchableOpacity>
+    );
+  }
+}
+
+class SummaryHeaderItem extends React.Component {
+  render() {
+    return (
+      <View style={ListingBodyHeaderStyles.Actions}>
+        {this.props.icon && (
+          <CustomIcon
+            name={this.props.icon}
+            size={
+              (ListingBodyHeaderStyles.ActionIconSize.width,
+              ListingBodyHeaderStyles.ActionIconSize.Height)
+            }
+            color={ListingBodyHeaderStyles.SummaryColor}
+          />
+        )}
+        <Text style={ListingBodyHeaderStyles.SummaryText}>
+          {this.props.text}
+        </Text>
+      </View>
     );
   }
 }
@@ -90,26 +125,37 @@ export class CarsListingBodyHeader extends React.Component {
           </View>
         </View>
         <View style={ListingBodyHeaderStyles.ActionsContainer}>
-          <ActionHeader
+          <ActionHeaderItem
             iconName="uniE74E"
             iconText="Sort"
             actionClicked={this.props.sortClicked}
           />
-          <ActionHeader
+          <ActionHeaderItem
             iconName="uniE773"
             iconText="Filter"
             actionClicked={this.props.filterClicked}
           />
-          <ActionHeader
+          <ActionHeaderItem
             iconName="uniE77F"
             iconText="Maps"
             actionClicked={this.props.mapsClicked}
           />
         </View>
-        <View style={ListingBodyHeaderStyles.ListingSummaryContainer}>
-          <View style={ListingBodyHeaderStyles.ListingSummaryItems}>
-            <Text>661 cars, 58 viewing, 50% reserved</Text>
-          </View>
+        <View style={ListingBodyHeaderStyles.SummaryContainer}>
+          <SummaryHeaderItem
+            style={ListingBodyHeaderStyles.SummaryItem}
+            text="661 cars"
+          />
+          <SummaryHeaderItem
+            style={ListingBodyHeaderStyles.SummaryItem}
+            icon="uniE651"
+            text="50% reserved"
+          />
+          <SummaryHeaderItem
+            style={ListingBodyHeaderStyles.SummaryItem}
+            text="58 viewing"
+            icon="uniF167"
+          />
         </View>
       </View>
     );
