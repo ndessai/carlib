@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Text, Button, Image, ImageBackground} from 'react-native';
+import {View, Text, ImageBackground, TouchableOpacity} from 'react-native';
+
 import CustomIcon from '../custom.icons';
 
 export class CarsHeader extends React.Component {
@@ -12,12 +13,20 @@ export class CarsHeader extends React.Component {
           style={{width: '100%', height: '100%'}}>
           <View style={{marginTop: 55, flex: 1, height: 36, flexDirection: 'row'}}>
             <View style={{width: 36, paddingLeft: 13, paddingTop: 9}}>
-            <CustomIcon name='uniE75B' size={10,18} color="#ffffff"/>
+            <TouchableOpacity onPress={()=>{}} >
+                <View>
+                <CustomIcon name='uniE75B' size={10,18} color="#ffffff"/>
+                </View>
+            </TouchableOpacity>
             </View>
             <View style={{height: 36, flexGrow: 1, flexDirection: 'column', alignItems: 'center'}}>
               <View style={{flex: 1, height: 19, flexDirection: 'row'}}>
                 <Text style={{fontSize: 16, color: '#ffffff'}}>NYC - MCO</Text>
-                <Image source={require('../../assets/edit_search.png')} style={{marginLeft: 3}}></Image>
+                <TouchableOpacity onPress={()=>{}} style={{marginLeft: 3}} >
+                    <View>
+                    <CustomIcon name='uniE693' size={18,16} color="#ffffff"/>
+                    </View>
+                </TouchableOpacity>
               </View>
               <View style={{flex: 1, height: 14}}>
                 <Text style={{fontSize: 12, color: '#ffffff'}}>Sep 12, 03:31pm - Sep 15, 06:50pm</Text>
@@ -25,9 +34,11 @@ export class CarsHeader extends React.Component {
             </View>
             <View style={{width: 36}}>
               <View style={{margin: 8, justifyContent: 'space-between', flexDirection: 'column'}}>
-                <Image source={require('../../assets/hamburger_menu_dash.png')}></Image>
-                <Image source={require('../../assets/hamburger_menu_dash.png')} style={{marginTop: 3}}></Image>
-                <Image source={require('../../assets/hamburger_menu_dash.png')} style={{marginTop: 3}}></Image>
+              <TouchableOpacity onPress={()=>{}} >
+                    <View>
+                    <CustomIcon name='uniE648' size={20, 18} color="#ffffff"/>
+                    </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
