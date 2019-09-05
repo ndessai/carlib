@@ -29,6 +29,10 @@ const HeaderStyles = {
 
 export class CarsHeader extends React.Component {
   render() {
+    let cityPair = this.props.from;
+    if (this.props.to) {
+      cityPair += ' - ' + this.props.to;
+    }
     return (
       <View style={HeaderStyles.Height}>
         <ImageBackground
@@ -36,7 +40,12 @@ export class CarsHeader extends React.Component {
           style={HeaderStyles.ImageSize}>
           <View style={HeaderStyles.Container}>
             <View style={HeaderStyles.BackContainer}>
-              <TouchableOpacity onPress={() => {}}>
+              <TouchableOpacity
+                onPress={() => {
+                  if (this.props.backClicked) {
+                    this.props.backClicked();
+                  }
+                }}>
                 <View>
                   <CustomIcon
                     name="uniE75B"
@@ -51,9 +60,13 @@ export class CarsHeader extends React.Component {
             </View>
             <View style={HeaderStyles.SearchParamsContainer}>
               <View style={HeaderStyles.SearchCityContainer}>
-                <Text style={HeaderStyles.SearchCityText}>NYC - MCO</Text>
+                <Text style={HeaderStyles.SearchCityText}> {cityPair} </Text>
                 <TouchableOpacity
-                  onPress={() => {}}
+                  onPress={() => {
+                    if (this.props.editClicked) {
+                      this.props.editClicked();
+                    }
+                  }}
                   style={HeaderStyles.EditIcon}>
                   <View>
                     <CustomIcon
@@ -69,14 +82,18 @@ export class CarsHeader extends React.Component {
               </View>
               <View style={HeaderStyles.DatesContainer}>
                 <Text style={HeaderStyles.DatesText}>
-                  Sep 12, 03:31pm - Sep 15, 06:50pm
+                  {this.props.fromTime + ' - ' + this.props.toTime}
                 </Text>
               </View>
             </View>
             <View style={HeaderStyles.HamburgerIconContainer}>
               <TouchableOpacity
                 style={HeaderStyles.HamburgerIcon}
-                onPress={() => {}}>
+                onPress={() => {
+                  if (this.props.menuClicked) {
+                    this.props.menuClicked();
+                  }
+                }}>
                 <View>
                   <CustomIcon
                     name="uniE648"
