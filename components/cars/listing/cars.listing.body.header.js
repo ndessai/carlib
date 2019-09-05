@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import CustomIcon from '../../custom.icons';
 
 const ListingBodyHeaderStyles = {
@@ -23,12 +23,48 @@ const ListingBodyHeaderStyles = {
     height: 45,
     flexDirection: 'row',
     backgroundColor: '#e2e2e2',
+    justifyContent: 'space-between',
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#787878',
   },
-  Actions: {flexDirection: 'row'},
-  ActionIconSize: {Width: 19, Height: 16},
+  Actions: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  ActionIconSize: {Width: 21, Height: 21},
+  ActionColor: '#158acb',
+  ActionText: {marginLeft: 10, fontSize: 12, color: '#158acb'},
   ListingSummaryContainer: {height: 39, backgroundColor: '#e2e2e2'},
   ListingSummaryItems: {marginTop: 12, marginBottom: 13, flexDirection: 'row'},
 };
+
+class ActionHeader extends React.Component {
+  render() {
+    return (
+      <TouchableOpacity
+        style={ListingBodyHeaderStyles.Actions}
+        onPress={() => {
+          if (this.props.actionClicked) {
+            this.props.actionClicked();
+          }
+        }}>
+        <CustomIcon
+          name={this.props.iconName}
+          size={
+            (ListingBodyHeaderStyles.ActionIconSize.width,
+            ListingBodyHeaderStyles.ActionIconSize.Height)
+          }
+          color={ListingBodyHeaderStyles.ActionColor}
+        />
+        <Text style={ListingBodyHeaderStyles.ActionText}>
+          {this.props.iconText}
+        </Text>
+      </TouchableOpacity>
+    );
+  }
+}
 
 export class CarsListingBodyHeader extends React.Component {
   render() {
@@ -54,48 +90,21 @@ export class CarsListingBodyHeader extends React.Component {
           </View>
         </View>
         <View style={ListingBodyHeaderStyles.ActionsContainer}>
-          <View style={ListingBodyHeaderStyles.Actions}>
-            <View>
-              <CustomIcon
-                name="uniE74E"
-                size={
-                  (ListingBodyHeaderStyles.ActionIconSize.width,
-                  ListingBodyHeaderStyles.ActionIconSize.Height)
-                }
-              />
-            </View>
-            <View>
-              <Text>Sort</Text>
-            </View>
-          </View>
-          <View style={ListingBodyHeaderStyles.Actions}>
-            <View>
-              <CustomIcon
-                name="uniE773"
-                size={
-                  (ListingBodyHeaderStyles.ActionIconSize.width,
-                  ListingBodyHeaderStyles.ActionIconSize.Height)
-                }
-              />
-            </View>
-            <View>
-              <Text>Filter</Text>
-            </View>
-          </View>
-          <View style={ListingBodyHeaderStyles.Actions}>
-            <View>
-              <CustomIcon
-                name="uniE77F"
-                size={
-                  (ListingBodyHeaderStyles.ActionIconSize.width,
-                  ListingBodyHeaderStyles.ActionIconSize.Height)
-                }
-              />
-            </View>
-            <View>
-              <Text>Maps</Text>
-            </View>
-          </View>
+          <ActionHeader
+            iconName="uniE74E"
+            iconText="Sort"
+            actionClicked={this.props.sortClicked}
+          />
+          <ActionHeader
+            iconName="uniE773"
+            iconText="Filter"
+            actionClicked={this.props.filterClicked}
+          />
+          <ActionHeader
+            iconName="uniE77F"
+            iconText="Maps"
+            actionClicked={this.props.mapsClicked}
+          />
         </View>
         <View style={ListingBodyHeaderStyles.ListingSummaryContainer}>
           <View style={ListingBodyHeaderStyles.ListingSummaryItems}>
