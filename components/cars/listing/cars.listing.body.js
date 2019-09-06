@@ -20,6 +20,10 @@ export class CarsListingBody extends React.Component {
           <CarsListItem  />
           <CarsListItem  />
           <CarsListItem  />
+          <CarsListItem  />
+          <CarsListItem  />
+          <CarsListItem  />
+          <CarsListItem  />
         </View>
       </View>
     );
