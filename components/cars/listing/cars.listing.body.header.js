@@ -3,7 +3,7 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import CustomIcon from '../../custom.icons';
 
 const ListingBodyHeaderStyles = {
-  Container: {flex: 1, flexDirection: 'column'},
+  Container: {flexDirection: 'column'},
   PromoContainer: {
     height: 40,
     alignItems: 'center',
