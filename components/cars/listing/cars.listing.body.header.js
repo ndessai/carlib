@@ -137,7 +137,7 @@ export class CarsListingBodyHeader extends React.Component {
           />
           <ActionHeaderItem
             iconName="uniE77F"
-            iconText="Maps"
+            iconText="Map"
             actionClicked={this.props.mapsClicked}
           />
         </View>

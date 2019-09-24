@@ -19,6 +19,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* carlibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* carlibTests.m */; };
+		30002C4E23398EE00078F2ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30002C4D23398EE00078F2ED /* AppDelegate.swift */; };
 		30295DF9232095FA00097DF9 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30295DF8232095F900097DF9 /* icomoon.ttf */; };
 		45569465693A974D2643D93C /* libPods-carlibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A460977C857C242CCA1103DB /* libPods-carlibTests.a */; };
 		52BB08CE0CB89E3F2E5E2E99 /* libPods-carlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A7842E4EA0AE67823C8A61 /* libPods-carlib.a */; };
@@ -74,6 +75,8 @@
 		2C3BDE7260994372BF9CC5F4 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* carlib-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carlib-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* carlib-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "carlib-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30002C4C23398EE00078F2ED /* carlib-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "carlib-Bridging-Header.h"; sourceTree = "<group>"; };
+		30002C4D23398EE00078F2ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30295DF8232095F900097DF9 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
 		347F417D269D48F1BF8BADEA /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		37F70AD62D666BD92F6DC028 /* Pods-carlib-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carlib-tvOS.release.xcconfig"; path = "Target Support Files/Pods-carlib-tvOS/Pods-carlib-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				30002C4D23398EE00078F2ED /* AppDelegate.swift */,
+				30002C4C23398EE00078F2ED /* carlib-Bridging-Header.h */,
 			);
 			name = carlib;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = L72YBQCM7D;
+						LastSwiftMigration = 1100;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -610,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30002C4E23398EE00078F2ED /* AppDelegate.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -664,6 +671,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 517303407D69F033432898A8 /* Pods-carlibTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = L72YBQCM7D;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -688,6 +696,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB5F6454258624A3E57AAE4C /* Pods-carlibTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = L72YBQCM7D;
@@ -710,6 +719,7 @@
 			baseConfigurationReference = 5109DA3A3814D73EBC326046 /* Pods-carlib.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = L72YBQCM7D;
@@ -722,6 +732,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = carlib;
+				SWIFT_OBJC_BRIDGING_HEADER = "carlib-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -731,7 +744,9 @@
 			baseConfigurationReference = F6C4F344303E694B880E5C1C /* Pods-carlib.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = L72YBQCM7D;
 				INFOPLIST_FILE = carlib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -742,6 +757,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = carlib;
+				SWIFT_OBJC_BRIDGING_HEADER = "carlib-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -965,7 +982,7 @@
 				00E356F71AD99517003FC87E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "carlib" */ = {
 			isa = XCConfigurationList;
@@ -974,7 +991,7 @@
 				13B07F951A680F5B00A75B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "carlib-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -983,7 +1000,7 @@
 				2D02E4981E0B4A5E006451C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "carlib-tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -992,7 +1009,7 @@
 				2D02E49A1E0B4A5E006451C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "carlib" */ = {
 			isa = XCConfigurationList;
@@ -1001,7 +1018,7 @@
 				83CBBA211A601CBA00E9B192 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
